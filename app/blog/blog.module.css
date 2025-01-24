@@ -117,3 +117,32 @@
     background-size: cover;
     background-position: center;
   }
+
+
+
+  .crudContainer {
+    padding: 20px;
+}
+
+.boletines {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.boletin {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.boletin h4 {
+    margin-top: 0;
+}
+
+.boletin p {
+    margin-bottom: 0;
+}
