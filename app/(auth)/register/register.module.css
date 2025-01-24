@@ -1,0 +1,44 @@
+.registerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/images/colegio.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.registerContainer h1 {
+  margin-bottom: 20px;
+}
+
+.registerContainer form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.registerContainer label {
+  margin-bottom: 10px;
+}
+
+.registerContainer input,
+.registerContainer select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.registerContainer button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.registerContainer button:hover {
+  background-color: #0056b3;
+}
