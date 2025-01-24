@@ -25,7 +25,8 @@ function LoginPage() {
 
     if (response.ok) {
       localStorage.setItem('token', data.token);
-      localStorage.setItem('tipo_apo', data.tipo_apo); // Almacena el tipo de usuario
+      localStorage.setItem('tipo_apo', data.tipo);
+      console.log("aqui esta el tipo",data.tipo);
       alert('Login exitoso');
       // Redirigir a la página de blog
       router.push('/blog');
