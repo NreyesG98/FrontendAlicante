@@ -26,7 +26,7 @@ const LoginPage = () => {
     setProgress(20);
 
     try {
-      const response = await fetch('http://localhost:4000/api/login', {
+      const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

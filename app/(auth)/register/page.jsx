@@ -28,7 +28,7 @@ function App() {
   // const handleRegister = async (e) => {
   //   e.preventDefault();
 
-  //   const response = await fetch('http://localhost:4000/api/register', {
+  //   const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/register', {
   //     method: 'POST',
   //     headers: {
   //       'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:4000/api/register', {
+      const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

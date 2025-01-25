@@ -1,7 +1,7 @@
 export async function fetchData() {
   const token = localStorage.getItem('token'); // O sessionStorage.getItem('token');
   
-  const response = await fetch('http://localhost:4000/api/data', {
+  const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/data', {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`,
@@ -19,7 +19,7 @@ export async function fetchData() {
 
 
 export async function getCursos() {
-  const data = await fetch("http://localhost:4000/api/cursos", {
+  const data = await fetch("${process.env.NEXT_PUBLIC_API_URL}/cursos", {
     cache: "no-store",
   });
   
@@ -28,7 +28,7 @@ export async function getCursos() {
 
 
 export async function getPagos() {
-  const data = await fetch("http://localhost:4000/api/pagos", {
+  const data = await fetch("${process.env.NEXT_PUBLIC_API_URL}/pagos", {
     cache: "no-store",
   });
   

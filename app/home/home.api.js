@@ -1,6 +1,6 @@
 // FILE: app/blog/api.js
 export async function getPagos() {
-  const data = await fetch("http://localhost:4000/api/pagos", {
+  const data = await fetch("${process.env.NEXT_PUBLIC_API_URL}/pagos", {
     cache: "no-store",
   });
   
@@ -8,7 +8,7 @@ export async function getPagos() {
 }
 
 export async function createPago() {
-  const data = await fetch("http://localhost:4000/api/pagos", {
+  const data = await fetch("${process.env.NEXT_PUBLIC_API_URL}/pagos", {
     cache: "no-store",
   });
   
@@ -17,7 +17,7 @@ export async function createPago() {
 
 
 export async function getUsers() {
-    const response = await fetch('http://localhost:4000/api/users', {
+    const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/users', {
         cache: 'no-store',
     });
     if (!response.ok) {
@@ -27,7 +27,7 @@ export async function getUsers() {
 }
 
 export async function createApoderado(apoderado) {
-    const response = await fetch('http://localhost:4000/api/apoderados', {
+    const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/apoderados', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export async function createApoderado(apoderado) {
 }
 
 export async function updateApoderado(id, apoderado) {
-    const response = await fetch(`http://localhost:4000/api/apoderados/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apoderados/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ export async function updateApoderado(id, apoderado) {
 }
 
 export async function deleteApoderado(id) {
-    const response = await fetch(`http://localhost:4000/api/apoderados/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apoderados/${id}`, {
         method: 'DELETE',
     });
     if (!response.ok) {

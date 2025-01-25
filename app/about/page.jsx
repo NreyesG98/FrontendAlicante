@@ -16,7 +16,7 @@ function App() {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost:4000/api/register', {
+    const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ function App() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost:4000/api/login', {
+    const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ function App() {
 
   const handleGetReuniones = async () => {
     const token = localStorage.getItem('token');
-    const response = await fetch('http://localhost:4000/api/reuniones', {
+    const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/reuniones', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`,
